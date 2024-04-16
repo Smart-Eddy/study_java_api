@@ -38,8 +38,11 @@ public class StaticMap {
 			int read = 0;
 			byte[] bytes = new byte[1024];
 			
-			String fileName = Long.valueOf(new Date().getTime()).toString(); // 파일 이름은 랜덤생성(중복방지, 파일이름이 동일할 때 덮어씌기 될 수 있음)
+			String prjPath = System.getProperty("user.dir"); // 현재 PROJECT의 root 디렉토리 이름을 리턴한다.
+			String dirPath = prjPath + "/src/navermapapi/map_images/";
+			String fileName = dirPath + Long.valueOf(new Date().getTime()).toString(); // 파일 이름은 랜덤생성(중복방지, 파일이름이 동일할 때 덮어씌기 될 수 있음)
 			File mapImageFile = new File(fileName + ".jpg"); // 생성된 jpg.파일의 이름을 지정 
+			mapImageFile.getParentFile().mkdirs(); // 디렉토리 생성
 			mapImageFile.createNewFile(); // 실제 시스템에 파일을 생성
 			OutputStream outputStream = new FileOutputStream(mapImageFile); // 해당 파일에 출력스트림 생성
 			

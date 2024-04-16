@@ -40,6 +40,7 @@ public class NaverMapAPI {
 			String y = addrData.get("y");
 			String roadAddress = addrData.get("roadAddress");
 			
+			// StaticMap API에서 필요한 위도, 경도, 주소 데이터를 넘겨준다. 
 			StaticMap staticMap = new StaticMap(clientId, clientSecret);
 			apiUrl = "https://naveropenapi.apigw.ntruss.com/map-static/v2/raster?";
 			String pos = URLEncoder.encode(x + " " + y, "UTF-8");
@@ -47,7 +48,7 @@ public class NaverMapAPI {
 			reqUrl += "center=" + x + "," + y;
 			reqUrl += "&level=16&w=700&h=500";
 			reqUrl += "&markers=type:t|size:mid|pos:" + pos + "|label:" + URLEncoder.encode(roadAddress, "UTF-8");
-			staticMap.getStaticMap(x, y, roadAddress, reqUrl); // 최종 RequestUrl은 getStaticMap 메서드 내에서 만들어진다.(위도,경도 정보 필요)
+			staticMap.getStaticMap(x, y, roadAddress, reqUrl);
 			
 	}catch (Exception e) {
 		e.printStackTrace();
