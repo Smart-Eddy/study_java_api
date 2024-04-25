@@ -9,5 +9,8 @@
 	<classpathentry kind="lib" path="C:/dev/lib/gson-2.8.5.jar"/>
 	<classpathentry kind="lib" path="C:/dev/lib/json-20180813.jar"/>
 	<classpathentry kind="lib" path="C:/dev/lib/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="C:/dev/lib/commons-codec-1.12.jar"/>
+	<classpathentry kind="lib" path="C:/dev/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/lib/poi-4.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
