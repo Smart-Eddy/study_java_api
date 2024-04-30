@@ -1,5 +1,9 @@
 package excel.vo;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+
 public class ExcelVO {
 	
 	private String title;
@@ -75,7 +79,5 @@ public class ExcelVO {
 		return "ExcelVO [title=" + title + ", author=" + author + ", company=" + company + ", isbn=" + isbn
 				+ ", imgUrl=" + imgUrl + "]";
 	}
-	
-	
 
 }
